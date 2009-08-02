@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %} Powered By {% endblock %}
+
+{% block content %}
+<h3>Related Projects</h3>
+<ul>
+    <li><a href="http://code.google.com/p/app-engine-patch/">app-engine-patch</a></li>
+    <li><a href="http://code.google.com/appengine/">App Engine</a></li>
+    <li><a href="http://www.djangoproject.com/">Django</a></li>
+    <li><a href="http://www.bitbucket.org/ubernostrum/django-registration/wiki/Home">django-registration</a></li>
+    <li><a href="http://www.blueprintcss.org/">Blueprint CSS</a></li>
+    <li><a href="http://jquery.com/">jQuery</a></li>
+    <li><a href="http://code.google.com/p/app-engine-patch/wiki/MediaGenerator">media generator</a></li>
+</ul>
+
+<h2>Samples</h2>
+<ul>
+    <li><a href="/admin/">Django Admin</a></li>
+    <li><a href="{% url pray.views.create_admin_user %}">generate an admin user</a></li>
+    <li><a href="{% url pray.views.list_people %}">generic views sample</a></li>
+</ul>
+
+<p>
+    <span id='clickme'>Click me!</span>
+</p>
+
+{% endblock %}

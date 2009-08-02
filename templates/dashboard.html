@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %} DashBoard {% endblock %}
+
+{% block content %}
+    <H2>Dashboard</H2>
+    <div class="login">
+        {% if user.is_authenticated %}
+            Welcome, {{ user.email }} | 
+            {% load googletags %} 
+            {% if google_user %}
+                <a href="{% google_logout_url %}">Logout</a>
+            {% else %}
+                <a href="{% url django.contrib.auth.views.logout %}">Logout</a>
+            {% endif %}              
+        {% else %}
+            <a href="{% url django.contrib.auth.views.login %}?redirect_to={{ request.get_full_path|urlencode }}">Login</a>
+        {% endif %}
+            
+    </div>    
+{% endblock %}
