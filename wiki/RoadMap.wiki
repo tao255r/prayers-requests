@@ -1,0 +1,23 @@
+#labels Featured
+= RoadMap =
+Milestones for the growth.
+
+----
+
+== iteration-1: Model Dev ==
+*Date: 2009.07.20 - 2009.08.16*
+
+To implement basic functions.
+  * User Management
+     # Register
+     # Activate
+     # Login
+     # Logout
+     # Password Recovery
+  * Profile Management
+     # Create profile
+     # Modify profile
+  * Request Management
+     # Create request
+     # Delete / Modify request
+     # Share request (with friends)
