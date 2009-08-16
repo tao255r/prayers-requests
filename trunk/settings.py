@@ -111,7 +111,10 @@ INSTALLED_APPS = (
     'pray',
     'registration',
     'mediautils',
+    'profiles',
 )
+
+AUTH_PROFILE_MODULE = "profiles.prayerprofile"
 
 # List apps which should be left out from app settings and urlsauto loading
 IGNORE_APP_SETTINGS = IGNORE_APP_URLSAUTO = (
