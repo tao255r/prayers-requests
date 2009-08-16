@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Create Profile{% endblock %}
+{% block content %}
+Create your profile:
+<form action="." method="POST">
+{{ form.as_p }}
+<input type="submit" value="Submit" />
+</form>
+{% endblock %}

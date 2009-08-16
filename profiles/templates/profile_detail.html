@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Profile Details{% endblock %}
+{% block content %}
+Profile details:
+<ul>
+<li>First name: {{profile.fname}}</li>
+<li>Nick name: {{profile.nickname}}</li>
+<li>gender: {{profile.gender}}</li>
+<li>bday: {{profile.bday}}</li>
+<li>location: {{profile.location}}</li>
+<li>avatar: {{profile.avatar}}</li>
+<li>date_updated: {{profile.date_updated}}</li>
+<li>date_joined: {{profile.date_joined}}</li>
+<li>privacy: {{profile.privacy}}</li>
+<li>latest_news: {{profile.latest_news}}</li>
+</ul>
+{% endblock %}
