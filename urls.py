@@ -10,10 +10,18 @@ admin.autodiscover()
 handler500 = 'ragendja.views.server_error'
 
 urlpatterns = auth_patterns + patterns('',
+    # Admin Interface
     ('^admin/(.*)', admin.site.root),
+    
+    # Powered Page
     (r'^powered/$', 'django.views.generic.simple.direct_to_template',
         {'template': 'powered.html'}),
+    
+    # Dashboard Page
     url(r'^$', 'django.views.generic.simple.direct_to_template',
         {'template': 'dashboard.html'}, name='Dashboard'),
+    
+    # Profile page
+    (r'^profiles/', include('profiles.urls')),
     
 ) + urlpatterns
