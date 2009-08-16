@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Komodo Project File - DO NOT EDIT -->
-<project id="b5f9139b-ee04-489b-b5bd-898a74c5c71e" kpf_version="4" name="Prayer-Request.kpf">
-<preference-set idref="b5f9139b-ee04-489b-b5bd-898a74c5c71e">
-  <boolean id="import_live">1</boolean>
-</preference-set>
-</project>
