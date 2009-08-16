@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*- 
 from django.conf.urls.defaults import *
 from ragendja.urlsauto import urlpatterns
 from ragendja.auth.urls import urlpatterns as auth_patterns
@@ -23,5 +23,9 @@ urlpatterns = auth_patterns + patterns('',
     
     # Profile page
     (r'^profiles/', include('profiles.urls')),
+    
+    # Sample page
+    (r'^sample/', 'django.views.generic.simple.direct_to_template',
+        {'template': 'sample.html'}),
     
 ) + urlpatterns
