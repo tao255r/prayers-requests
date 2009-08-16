@@ -1,10 +1,472 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title><!-- Insert your title here --></title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Broom Cupboard | Keeping your front end neatly in order..</title>
+<!--favicon-->
+<link rel="icon" href="favicon.ico" />
+<link rel="shortcut icon" href="favicon.ico" />
+<!--jQuery-->
+      <script type="text/javascript" src="{{ MEDIA_URL }}combined-{{ LANGUAGE_CODE }}.js"></script>
+	
+      <link rel="stylesheet" type="text/css"  media="screen, projection" href="{{ MEDIA_URL }}combined-{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}.css" />
+      <link rel="stylesheet" type="text/css"  media="print" href="{{ MEDIA_URL }}combined-print-{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}.css" />
+
+
+	<script type="text/javascript">
+    
+    $(document).ready(function(){
+   
+    $(".broom_form").validate();//validates any form with class="broom_form"
+	$('.date-pick').datePicker({startDate:'01/01/1996'});//initiates datepicker, in this case with a begin date of 01/01/1996; earlier dates cannot be selected
+	$("a.close").click(function(){   $(this).parent().slideUp(); return false;});  //links with class 'close' close parent div
+
+    });
+    
+    </script>
 </head>
-<body>
-    <!-- Insert your content here -->
-</body>
+
+<body id="b_main">
+
+<div id="header">
+    <div id="logo">
+    <h1 id="header_broomcupboard"><a href="">Broom Cupboard</a></h1>
+    <h4 id="header_strapline">Keeping your front end neatly in order..</h4>
+    <ul id="welcome">
+        <li id="esp"><a href="">ESP</a></li>
+        <li id="eng"><a href="">ENG</a></li>
+        <li><a href="">Settings</a></li>
+        <li><a href="2.html">Lights Out</a></li>
+        <li>Welcome <strong>Administrator</strong></li>
+        <li id="last">Last Login: 10 October 2008</li>
+    </ul><!--/end #welcome-->
+    </div><!--/end #logo-->
+</div><!--/end #header-->
+    
+<div id="wrapper"><!--holds pretty much everything-->
+    <div id="menu_main">
+        <div class="menu_main_section first">
+            <h4 id="menu_main_h_support">Section Header</h4>
+            <ul>
+                <li><a href="">Menu Item 1</a></li>
+                <li><a href="">Menu Item 2</a></li>
+                <li><a href="">Menu Item 3</a></li>
+                <li class="selected"><a href="">Menu Item 4</a></li>
+                <li><a href="">Menu Item 5</a></li>
+            </ul>
+        </div><!--/end #menu_main_section-->
+        
+        <div class="menu_main_section">
+            <h4 id="menu_main_h_config">Section Header</h4>
+            <ul>
+                <li><a href="">Menu Item 1</a></li>
+                <li><a href="">Menu Item 2</a></li>
+                <li><a href="">Menu Item 3</a></li>
+            </ul>
+        </div><!--/end #menu_main_section-->
+        
+        <div class="menu_main_section">
+            <h4 id="menu_main_h_files">Section Header</h4>
+            <ul>
+                <li><a href="">Menu Item 1</a></li>
+                <li><a href="">Menu Item 2</a></li>
+                <li><a href="">Menu Item 3</a></li>
+            </ul>
+        </div><!--/end #menu_main_section-->
+    </div><!--/end #menu_main-->
+
+	<div id="content">
+        <div class="tabber">
+        
+        <div class="tabbertab">
+            <h2>Dashboard</h2>
+            
+            <div class="container1">
+            <div class="notification attention"><a href="#" class="close">close</a> <em><img src="assets/img/icons/exclamation.png" alt=""/>You have <strong>23</strong> unread messages! <a href="">Go to Message Box</a></em></div>
+       	    </div><!--/end .container1-->
+            
+           	<div class="container2">
+                <div class="welcome_list">
+                <h4>Here's your job list..</h4>
+                 <p><img src="assets/img/icons/card_address.png" alt=""/>Change your Administrators <a href="">Profile</a></p>
+                 <p><img src="assets/img/icons/bin.png" alt=""/>Throw out the <a href="">Trash</a></p>
+                 <p><img src="assets/img/icons/clock.png" alt=""/>Take a <a href="">Coffee Break</a></p>
+                 <p><img src="assets/img/icons/database.png" alt=""/>Clean up the  <a href="">Database</a></p>
+                 <p><img src="assets/img/icons/folder_open_document_text.png" alt=""/>Clean up your <a href="">Files</a></p>
+                 <p><img src="assets/img/icons/switch.png" alt=""/>Turn the <a href="">Lights Out</a> when you leave</p>
+                </div><!--/end #welcome_list-->
+       	    </div><!--/end .container2-->
+            
+         	<div class="container2">
+            <h3>Welcome to Broom Cupboard!</h3>
+         	  <p><strong>Broom Cupboard is a simple, sylish and novel back-end theme for any custom dynamic website.</strong> Built with valid <a href="http://validator.w3.org/check?uri=referer">XHTML 1 Strict</a>, <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3 ">CSS3</a> and supported by the occasional jQuery flourish, all it requires is for you to paste in your dynamic data and function.</p>
+         	  <p>Comprised of a main menu + tabbed content, navigating Broom Cupboard is straightforward and logical. Content is displayed at either 50% or 100% of the page width; just two classes to choose from for displaying your structural block elements.</p>
+              <p>Now go and play!</p>
+       	    </div><!--/end .container2-->
+                        
+            <div class="container1 separator">
+            <h4>Recent Contacts</h4>
+                <table cellspacing="0" summary="table" class="broom_table">
+                    <tbody>
+                      <tr class="odd">
+                            <td>Barry McBiggins</td>
+                            <td>Number 55, Address Street</td>
+                            <td><a href="">email@soandso.com</a></td>
+                          <td>
+                          <a href="" class="table_delete">delete</a>
+                          <a href="" class="table_edit">edit</a>
+                          <a href="" class="table_comment">comment</a>                          </td>
+                      </tr>
+                        <tr class="even">
+                            <td>Barry McBiggins</td>
+                            <td>Number 55, Address Street</td>
+                            <td><a href="">email@soandso.com</a></td>
+                          <td>
+                          <a href="" class="table_delete">delete</a>
+                          <a href="" class="table_edit">edit</a>
+                          <a href="" class="table_comment">comment</a>                          </td>
+                        </tr>
+                        <tr class="odd">
+                            <td>Barry McBiggins</td>
+                            <td>Number 55, Address Street</td>
+                            <td><a href="">email@soandso.com</a></td>
+                          <td>
+                          <a href="" class="table_delete">delete</a>
+                          <a href="" class="table_edit">edit</a>
+                          <a href="" class="table_comment">comment</a>                          </td>
+                        </tr>
+                        <tr class="even">
+                            <td>Barry McBiggins</td>
+                            <td>Number 55, Address Street</td>
+                            <td><a href="">email@soandso.com</a></td>
+                          <td>
+                          <a href="" class="table_delete">delete</a>
+                          <a href="" class="table_edit">edit</a>
+                          <a href="" class="table_comment">comment</a>                          </td>
+                        </tr>
+                        <tr class="odd">
+                            <td>Barry McBiggins</td>
+                            <td>Number 55, Address Street</td>
+                            <td><a href="">email@soandso.com</a></td>
+                          <td>
+                          <a href="" class="table_delete">delete</a>
+                          <a href="" class="table_edit">edit</a>
+                          <a href="" class="table_comment">comment</a>                          </td>
+                        </tr>
+                    </tbody>
+                </table>
+       	    </div><!--/end .container1-->
+        </div><!--/end .tabbertab-->
+        
+        <div class="tabbertab">
+        
+        <div class="container2">
+            <h2>Form Elements</h2>
+            <h3>Form Elements</h3>
+         	  <p>Form elements such as <em>inputs</em>, <em>selects</em>, <em>textareas</em> are all placed within labels allowing for easy positioning and distinction.</p><p>The jQuery DatePicker for example requires each date input field to be individually identifiable. The Validation too - click on any of the form submit buttons and you'll see it in action. The 3 basic input fields are required, they have therefore been assigned the class <em>required</em>. </p>
+   	      </div><!--/end .container2-->
+        
+        <div class="container2">
+            <h3>&nbsp;</h3>
+         	  <p>The last of the 3 is also an email field and requires correct formatting. This field has the additonal class <em>email</em>. Further documentation of these jQuery scripts can be found at the their authors' sites.</p>
+              <p>The form submit buttons are just that; buttons and not inputs. This is to avoid the default styling applied to form inputs.</p>
+   	      </div><!--/end .container2-->
+        
+                   
+            <form method="post" action="" class="broom_form separator"><!--/form acts as separator - stroke on top-->
+            <fieldset class="container2">       
+                      <label for="label1" class="label1">
+                          <span>This is a small form input</span>
+                          <input name="label1" id="label1" type="text" value="" class="required"/>
+                      </label><!--/end .label1-->
+                      
+                      <label for="label2" class="label2">
+                          <span>This is a medium form input</span>
+                          <input name="label2" id="label2" type="text" value="" class="required"/>
+                      </label><!--/end .label2-->
+                      
+                      <label for="label3" class="label3">
+                          <span>This is a large form input</span>
+                          <input name="label3" id="label3" type="text" value="" class="required email" />
+                      </label><!--/end .label3-->
+                      
+                      <label for="start-date" class="label_calendar1">
+                          <span>Small date picker form input</span>
+                          <input name="startdate" id="start-date" readonly="readonly" class="date-pick" value="20/10/2008"/>
+                      </label><!--/end .label_calendar1-->
+                      
+                      <label for="start-date1" class="label_calendar2">
+                          <span>Medium date picker form input</span>
+                          <input name="startdate" id="start-date1" readonly="readonly" class="date-pick" value="20/10/2008"/>
+                      </label><!--/end .label_calendar2-->
+                      
+                      <label for="start-date2" class="label_calendar3">
+                          <span>Large date picker form input</span>
+                          <input name="startdate" id="start-date2" readonly="readonly" class="date-pick" value="20/10/2008"/>
+                      </label><!--/end .label_calendar3-->
+       	    </fieldset><!--/end .container2-->
+        
+         	<fieldset class="container2">
+                             <label for="select1" class="label1">
+                             	<span>This is a small form select</span>
+                                <select name="select1" id="select1">
+                                    <option value="">Option 1</option>
+                                    <option value="">Option 2</option>
+                                    <option value="">Option 3</option>
+                                </select>
+                            </label><!--/end .label1 -->
+                             
+                             <label for="select2" class="label2">
+                             	<span>This is a medium form select</span>
+                                <select name="select2" id="select2">
+                                    <option value="">Option 1</option>
+                                    <option value="">Option 2</option>
+                                    <option value="">Option 3</option>
+                                </select>
+                            </label><!--/end .label2 -->
+                             
+                             <label for="select3" class="label3">
+                             	<span>This is a large form select</span>
+                                <select name="select3" id="select3">
+                                    <option value="">Option 1</option>
+                                    <option value="">Option 2</option>
+                                    <option value="">Option 3</option>
+                                </select>
+                            </label><!--/end .label3 -->
+                            
+                    		
+                             <label for="textarea1" class="label3 ta">
+                             	<span>This is a Text Area</span>
+                               <textarea name="textarea1" id="textarea1" rows="" cols="">Labels for text areas are as high as 3 normal labels, to keep uniformity..</textarea>
+                            </label><!--/end .label3 -->
+                    </fieldset><!--/end container2-->
+                            
+                            
+         			<fieldset class="container1">
+                         <!--bulletproof button : <button> version based on the <a> of Cameron Moll : http://www.cameronmoll.com/  -->
+                        <div class="button">
+						<div class="btn-inner">
+						<span>
+                        <em>
+                        <button type="submit"><img src="assets/img/icons/pencil.png" alt=""/>edit details</button>
+						</em>                        </span>						</div>
+						</div>
+                            
+                         <!--bulletproof button : <button> version based on the <a> of Cameron Moll : http://www.cameronmoll.com/  -->
+                        <div class="button">
+						<div class="btn-inner">
+						<span>
+                        <em>
+                        <button type="submit"><img src="assets/img/icons/cross.png" alt=""/>delete record</button>
+						</em>                        </span>						</div>
+						</div>
+                            
+                         <!--bulletproof button : <button> version based on the <a> of Cameron Moll : http://www.cameronmoll.com/  -->
+                        <div class="button">
+						<div class="btn-inner">
+						<span>
+                        <em>
+                        <button type="submit"><img src="assets/img/icons/disk_black.png" alt=""/>save all changes</button>
+						</em>                        </span>						</div>
+						</div>
+            </fieldset><!--/end .container1-->
+            </form><!--/end .broom_form-->
+        </div><!--/end .tabbertab-->
+        
+        <div class="tabbertab">
+            <h2>Body Text Example</h2>
+         	<div class="container1">
+            <h3>Validation</h3>
+         	  <p><strong>This back-end theme has been checked for accessibility across the main browsers, including Internet Explorer 6 (always a pleasure).</strong> The superb Fugue png icons by <a href="http://www.pinvoke.com/">Yusuke Kamiyamane</a> have even made it over to IE6 thanks to the PNGFIX script by <a href="http://www.twinhelix.com/">Angus Turnbull</a>. Broom Cupboard hacking for IE6 doesn't affect other browsers as extra images, css files and scripts are separated and only come into play when IE6 is used. If you're not interested in catering for IE6 with this theme then just delete the folder <em>assets/ie6.</em></p><p>All the basic elements which you would come across in a CMS admin have been catered for, though suggestions for an update are welcome.</p>
+         	  <p>Feel free to leave comments, ask for support or anything else.</p>
+       	    </div><!--/end .container1-->
+         	<div class="container2">
+            <h4>Credit where credit's due.. </h4>
+         	 <p>All documentation, support and usage for elements featured in this theme can be found through the following links:</p>
+                <ul class="points">
+                    <li>jQuery DatePicker: Kelvin Luck <a href="http://www.kelvinluck.com/">www.kelvinluck.com</a></li>
+                    <li>jQuery Validation: J&ouml;rn Zaefferer <a href="http://bassistance.de/jquery-plugins/jquery-plugin-validation/">bassistance.de</a></li>
+                    <li>Tabber javascript: Barelyfitz <a href="http://www.barelyfitz.com/projects/tabber/">www.barelyfitz.com</a></li>
+                    <li>Reset CSS: Erik Meyer <a href="http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded">meyerweb.com</a></li>
+                    <li>Bullet-proof button: Cameron Moll <a href="http://www.cameronmoll.com">www.cameronmoll.com</a></li>
+                    <li>Fugue icons: Yusuke Kamiyamane <a href="http://www.pinvoke.com/">www.pinvoke.com</a></li>
+                    <li>Flag Icons: Mark James <a href="http://www.famfamfam.com/lab/icons/flags/">www.famfamfam.com</a></li>
+                    <li>PNGFIX IE6: Angus Turnbull <a href="http://www.twinhelix.com/">www.twinhelix.com</a></li>
+                </ul>
+       	    </div><!--/end .container2-->
+         	<div class="container2">
+            <h5>Div.container2: h5</h5><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus urna orci, tempus at, consectetur mattis, placerat sit amet, risus. Morbi ligula magna, lacinia non, tempor nec, tristique sagittis, urna. Donec tincidunt pretium dolor.</p>
+         	  <p>Mauris tempus scelerisque ipsum. Etiam ut dui. Aenean luctus, diam quis tincidunt venenatis, diam odio vestibulum libero, eu dignissim pede massa in erat. Nulla augue enim, hendrerit ac, convallis quis, mollis sed, lorem. Vestibulum malesuada massa nec justo.</p><p>Suspendisse quis massa. Vivamus euismod elit sed lorem. Mauris porttitor. Nunc augue neque, sodales in, rhoncus ut, pretium vitae, quam. In hac habitasse platea dictumst.</p>
+       	    </div><!--/end .container2-->
+        </div><!--/end .tabbertab-->
+        
+        <div class="tabbertab">
+            <h2>Notification Examples</h2>
+            <div class="container1">
+            <div class="notification error"><a href="#" class="close">close</a> <em><img src="assets/img/icons/cross_circle.png" alt=""/>Error notification, full page width and this one has a jQuery close button</em></div>
+            <div class="notification confirm"><em><img src="assets/img/icons/tick_circle.png" alt=""/>Confirmation notification, full page width</em></div>
+       	    </div><!--/end .container1-->
+            
+            <div class="container2">
+            <div class="notification information"><em><img src="assets/img/icons/information.png" alt=""/>Information notification, half page width</em></div>
+       	    </div><!--/end .container2-->
+            
+            <div class="container2">
+            <div class="notification attention"><em><img src="assets/img/icons/exclamation.png" alt=""/>Attention notification, half page width</em></div>
+       	    </div><!--/end .container2-->
+        </div><!--/end .tabbertab-->
+         
+        
+        <div class="tabbertab">
+            <h2>Table Example</h2>
+            <div class="container1">
+            <h3>Div.container1: h3</h3>
+                      <table cellspacing="0" summary="table" class="broom_table">
+                     <thead>
+                     	    <tr>
+                                <th scope="col">Header 1</th>
+                                <th scope="col">Header 2</th>
+                                <th scope="col">Header 3</th>
+                                <th scope="col">Header 4</th>
+                      		</tr>
+                     </thead>          
+                    <tbody>
+                      <tr class="odd">
+                            <td>Barry McBiggins</td>
+                            <td>Number 55, Address Street</td>
+                            <td><a href="">email@soandso.com</a></td>
+                          <td>
+                          <a href="" class="table_delete">delete</a>
+                          <a href="" class="table_edit">edit</a>
+                          <a href="" class="table_comment">comment</a>                          </td>
+                      </tr>
+                        <tr class="even">
+                            <td>Barry McBiggins</td>
+                            <td>Number 55, Address Street</td>
+                            <td><a href="">email@soandso.com</a></td>
+                          <td>
+                          <a href="" class="table_delete">delete</a>
+                          <a href="" class="table_edit">edit</a>
+                          <a href="" class="table_comment">comment</a>                          </td>
+                        </tr>
+                        <tr class="odd">
+                            <td>Barry McBiggins</td>
+                            <td>Number 55, Address Street</td>
+                            <td><a href="">email@soandso.com</a></td>
+                          <td>
+                          <a href="" class="table_delete">delete</a>
+                          <a href="" class="table_edit">edit</a>
+                          <a href="" class="table_comment">comment</a>                          </td>
+                        </tr>
+                        <tr class="even">
+                            <td>Barry McBiggins</td>
+                            <td>Number 55, Address Street</td>
+                            <td><a href="">email@soandso.com</a></td>
+                          <td>
+                          <a href="" class="table_delete">delete</a>
+                          <a href="" class="table_edit">edit</a>
+                          <a href="" class="table_comment">comment</a>                          </td>
+                        </tr>
+                        <tr class="odd">
+                            <td>Barry McBiggins</td>
+                            <td>Number 55, Address Street</td>
+                            <td><a href="">email@soandso.com</a></td>
+                          <td>
+                          <a href="" class="table_delete">delete</a>
+                          <a href="" class="table_edit">edit</a>
+                          <a href="" class="table_comment">comment</a>                          </td>
+                        </tr>
+                        <tr class="even">
+                            <td>Barry McBiggins</td>
+                            <td>Number 55, Address Street</td>
+                            <td><a href="">email@soandso.com</a></td>
+                          <td>
+                          <a href="" class="table_delete">delete</a>
+                          <a href="" class="table_edit">edit</a>
+                          <a href="" class="table_comment">comment</a>                          </td>
+                        </tr>
+                        <tr class="odd">
+                            <td>Barry McBiggins</td>
+                            <td>Number 55, Address Street</td>
+                            <td><a href="">email@soandso.com</a></td>
+                          <td>
+                          <a href="" class="table_delete">delete</a>
+                          <a href="" class="table_edit">edit</a>
+                          <a href="" class="table_comment">comment</a>                          </td>
+                        </tr>
+                        <tr class="even">
+                            <td>Barry McBiggins</td>
+                            <td>Number 55, Address Street</td>
+                            <td><a href="">email@soandso.com</a></td>
+                          <td>
+                          <a href="" class="table_delete">delete</a>
+                          <a href="" class="table_edit">edit</a>
+                          <a href="" class="table_comment">comment</a>                          </td>
+                        </tr>
+                        <tr class="odd">
+                            <td>Barry McBiggins</td>
+                            <td>Number 55, Address Street</td>
+                            <td><a href="">email@soandso.com</a></td>
+                          <td>
+                          <a href="" class="table_delete">delete</a>
+                          <a href="" class="table_edit">edit</a>
+                          <a href="" class="table_comment">comment</a>                          </td>
+                        </tr>
+                        <tr class="even">
+                            <td>Barry McBiggins</td>
+                            <td>Number 55, Address Street</td>
+                            <td><a href="">email@soandso.com</a></td>
+                          <td>
+                          <a href="" class="table_delete">delete</a>
+                          <a href="" class="table_edit">edit</a>
+                          <a href="" class="table_comment">comment</a>                          </td>
+                        </tr>
+                        <tr class="odd">
+                            <td>Barry McBiggins</td>
+                            <td>Number 55, Address Street</td>
+                            <td><a href="">email@soandso.com</a></td>
+                          <td>
+                          <a href="" class="table_delete">delete</a>
+                          <a href="" class="table_edit">edit</a>
+                          <a href="" class="table_comment">comment</a>                          </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="pagination">
+                	<a href="">1</a>
+                	<a href="">2</a>
+                	<a href="">3</a>
+                	<a href="" class="selected">4</a>
+                	<a href="">5</a>
+                	<a href="">6</a>
+                	<a href="">7</a>
+                	<a href="">8</a>
+                	<a href="">9</a>
+                	<a href="">10</a>                </div><!--/end .pagination-->
+       	    </div><!--/end .container1-->
+        </div><!--/end .tabbertab-->
+        </div><!--/end .tabber-->
+    </div><!--/end #content-->
+    
+    <ul id="footer">
+        <li>Copyright &copy; 2008/2009 <a href="">Broom Cupboard</a></li>
+        <li><a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3 ">CSS</a> </li>
+        <li><a href="http://validator.w3.org/check?uri=referer">XHTML</a></li>
+        <li><a href="#">top</a></li>
+    </ul><!--/end #footer-->
+
+</div>
+<!--/end #wrapper-->
+
+<div class="clear"></div><!--/end .clear-->
+
+
+
+</body><!--/end #b_main-->
+
+
+
 </html>
+
