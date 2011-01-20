@@ -29,3 +29,5 @@ urlpatterns = auth_patterns + patterns('',
         {'template': 'sample.html'}),
     
 ) + urlpatterns
+
+# try google code online editor
